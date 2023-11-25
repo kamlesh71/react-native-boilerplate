@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useColorScheme } from 'react-native';
-import { setColorSchema } from '@/store/color-schema/slices/color-schema-slice';
+import { setColorSchema } from '@/store/color-schema/slices';
 import { selectUsingSystemSchema } from '@/store/color-schema/selectors';
 import { useUpdatedEffect } from './useUpdatedEffect';
 

@@ -11,7 +11,7 @@ import {
   setLightSchema,
   setDarkSchema,
   setSystemSchema,
-} from '@/store/color-schema/slices/color-schema-slice';
+} from '@/store/color-schema/slices';
 
 const ColorSchemaPicker = () => {
   const colorSchema = useSelector(selectActiveColorSchema);

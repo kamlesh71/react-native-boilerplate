@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ColorSchemaState } from '../types';
+import { ColorSchemaState } from './types';
 import { COLOR_SCHEMA_SLICE } from '@/store/constants';
 import { Appearance } from 'react-native';
 

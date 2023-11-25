@@ -1,79 +1,93 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Sure, here is the updated markdown for the readme file with the additional directory structure:
 
-# Getting Started
+## React Native Project with Redux, Redux Saga, TypeScript, Path Aliases, Fonts, React Native Paper, React Navigation, Dark Mode, and Login Flow
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+### Project Overview
 
-## Step 1: Start the Metro Server
+This React Native project is a comprehensive setup that includes Redux, Redux Saga, TypeScript, path aliases, fonts, React Native Paper, React Navigation, and login flow. It also features a dark mode toggle that can be switched manually or automatically based on the user's OS preference.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+* Redux and Redux Saga for state management
+* TypeScript for type safety and code maintainability
+* Path aliases for easy navigation within the project
+* Custom fonts for enhanced UI design
+* React Native Paper for a consistent and cross-platform UI
+* React Navigation for effortless app navigation
+* Dark mode toggle for personalized user experience
+* Login flow for secure user authentication
 
-```bash
-# using npm
-npm start
+### Directory Structure
 
-# OR using Yarn
-yarn start
+The project is organized into well-defined directories and files to maintain a clean and maintainable codebase:
+
+```
+assets
+├── fonts
+│   ├── font1.ttf
+│   └── font2.otf
+└── images
+    ├── image1.png
+    └── image2.jpg
+components
+├── Button
+│   ├── Button.tsx
+│   └── Button.types.ts
+├── Input
+│   ├── Input.tsx
+│   └── Input.types.ts
+├── Text
+│   ├── Text.tsx
+│   └── Text.types.ts
+└── ...
+hooks
+├── useAsyncEffect.ts
+├── useDebounce.ts
+├── useFetch.ts
+└── ...
+navigation
+├── AuthStack.tsx
+├── MainStack.tsx
+└── RootStack.tsx
+screens
+├── Auth
+│   ├── LoginScreen.tsx
+│   └── SignupScreen.tsx
+├── Home
+│   └── HomeScreen.tsx
+└── ...
+services
+├── AuthService.ts
+├── TokenService.ts
+└── ...
+store
+├── index.ts
+├── module-name
+│   ├── api.ts
+│   ├── sagas.ts
+│   ├── selectors.ts
+│   ├── slices.ts
+│   └── types.ts
+└── ...
+utils
+├── constants.ts
+├── helpers.ts
+├── validators.ts
+└── ...
 ```
 
-## Step 2: Start your Application
+### Dark Mode Toggle
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+The project provides a dark mode toggle that can be switched manually by the user or automatically based on the user's OS preference.
 
-### For Android
+### Login Flow
 
-```bash
-# using npm
-npm run android
+The project includes a login flow that allows users to authenticate their credentials before accessing the app's features.
 
-# OR using Yarn
-yarn android
-```
+### Customization
 
-### For iOS
+The project is designed to be easily customizable to suit your specific needs and preferences.
 
-```bash
-# using npm
-npm run ios
+### Contributing
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Contributions to the project are welcome. Please follow the guidelines in the `CONTRIBUTING.md` file.

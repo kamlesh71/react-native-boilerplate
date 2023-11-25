@@ -1,7 +1,7 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { setLoading, setToken } from '../slices/auth-slice';
-import * as api from '../api';
-import { loginSagaAction, registerSagaAction } from './auth-actions';
+import { setLoading, setToken } from './slices';
+import * as api from './api';
+import { loginSagaAction, registerSagaAction } from './actions';
 
 function* loginSaga(action: ReturnType<typeof loginSagaAction>) {
   try {

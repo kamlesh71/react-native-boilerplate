@@ -5,8 +5,8 @@ import { Spacer, Container } from '@/components';
 import { styles } from './styles';
 import { ColorSchemaPicker } from '@/components/ColorSchemaPicker';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectAuthLoading } from '@/store/user/selectors/auth-selector';
-import { loginSagaAction } from '@/store/user/sagas/auth-actions';
+import { selectAuthLoading } from '@/store/auth/selectors';
+import { loginSagaAction } from '@/store/auth/actions';
 
 const LoginScreen: React.FC<AppStackScreenProps<'Login'>> = ({
   navigation,
