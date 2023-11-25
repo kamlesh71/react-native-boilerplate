@@ -1,5 +1,5 @@
 import { MainBottomTabScreenProps } from '@/navigation/types';
-import { setToken } from '@/store/user/slices/auth-slice';
+import { setToken } from '@/store/auth/slices';
 import React from 'react';
 import { View } from 'react-native';
 import { Button, Text } from 'react-native-paper';

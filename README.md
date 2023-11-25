@@ -1,5 +1,3 @@
-Sure, here is the updated markdown for the readme file with the additional directory structure:
-
 ## React Native Project with Redux, Redux Saga, TypeScript, Path Aliases, Fonts, React Native Paper, React Navigation, Dark Mode, and Login Flow
 
 ### Project Overview
