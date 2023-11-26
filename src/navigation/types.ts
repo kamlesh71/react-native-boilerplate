@@ -5,6 +5,7 @@ export type AppStackParamsList = {
   Register: undefined;
   Login: undefined;
   Main: undefined;
+  EditProfile: undefined;
 };
 
 export type AppStackScreenProps<T extends keyof AppStackParamsList> =
@@ -16,8 +17,9 @@ export type BottomTabsParamsList = {
   Notification: undefined;
 };
 
-export type MainBottomTabScreenProps<T extends keyof BottomTabsParamsList> =
-  BottomTabScreenProps<BottomTabsParamsList, T>;
+export type MainBottomTabScreenProps<
+  T extends keyof BottomTabsParamsList | keyof AppStackParamsList,
+> = BottomTabScreenProps<BottomTabsParamsList & AppStackParamsList, T>;
 
 export type AppRouteList =
   | keyof AppStackParamsList

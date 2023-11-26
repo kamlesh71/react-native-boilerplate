@@ -3,9 +3,9 @@ import {
   DefaultTheme as NavigationDefaultTheme,
 } from '@react-navigation/native';
 
-import { MD3LightTheme, MD3DarkTheme } from 'react-native-paper';
+import { MD3LightTheme, MD3DarkTheme, MD3Theme } from 'react-native-paper';
 
-const LightTheme = {
+const LightTheme: MD3Theme = {
   ...MD3LightTheme,
   ...NavigationDefaultTheme,
   colors: {
@@ -14,7 +14,7 @@ const LightTheme = {
   },
 };
 
-const DarkTheme = {
+const DarkTheme: MD3Theme = {
   ...MD3DarkTheme,
   ...NavigationDarkTheme,
   colors: {

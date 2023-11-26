@@ -1,12 +1,13 @@
 import { enableFreeze } from 'react-native-screens';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, Theme } from '@react-navigation/native';
 import React from 'react';
 import { RootStack, navigationRef } from '@/navigation/AppStack';
 import { DarkTheme, LightTheme } from './theme';
 import { PaperProvider } from 'react-native-paper';
+import { PersistGate } from 'redux-persist/integration/react';
 import { Provider, useSelector } from 'react-redux';
 import './utils/bootstrap';
-import store from './store';
+import { store, persistor } from './store';
 import { selectActiveColorSchema } from './store/color-schema/selectors';
 import { useListenColorSchemaChange } from './hooks/useListenColorSchemaChange';
 
@@ -21,7 +22,9 @@ function App(): JSX.Element {
 
   return (
     <PaperProvider theme={appTheme}>
-      <NavigationContainer ref={navigationRef} theme={appTheme}>
+      <NavigationContainer
+        ref={navigationRef}
+        theme={appTheme as unknown as Theme}>
         <RootStack />
       </NavigationContainer>
     </PaperProvider>
@@ -30,7 +33,9 @@ function App(): JSX.Element {
 
 const AppWithRedux = () => (
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>
 );
 

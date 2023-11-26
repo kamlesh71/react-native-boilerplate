@@ -16,13 +16,22 @@ const LoginScreen: React.FC<AppStackScreenProps<'Login'>> = ({
 
   return (
     <Container style={styles.container}>
-      <TextInput label="Email" />
+      <TextInput
+        right={<TextInput.Icon icon="email" />}
+        mode="outlined"
+        label="Email"
+      />
 
       <Spacer vertical={20} />
 
-      <TextInput label="Password" secureTextEntry />
+      <TextInput
+        right={<TextInput.Icon icon="lock" />}
+        mode="outlined"
+        label="Password"
+        secureTextEntry
+      />
 
-      <Spacer vertical={20} />
+      <Spacer vertical={30} />
 
       <Button
         onPress={() =>

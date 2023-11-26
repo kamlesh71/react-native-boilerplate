@@ -4,9 +4,10 @@ import LoginScreen from '@/screens/Auth/Login/LoginScreen';
 import { AppStackParamsList } from './types';
 import RegisterScreen from '@/screens/Auth/Register/RegisterScreen';
 import { useSelector } from 'react-redux';
-import { selectLoggedIn } from '@/store/user/selectors/auth-selector';
+import { selectLoggedIn } from '@/store/auth/selectors';
 import { BottomTabs } from './BottomTabs';
 import { createNavigationContainerRef } from '@react-navigation/native';
+import EditProfileScreen from '@/screens/Profile/EditProfile/EditProfileScreen';
 
 export const navigationRef = createNavigationContainerRef();
 
@@ -34,11 +35,18 @@ export const RootStack = () => {
           />
         </>
       ) : (
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Main"
-          component={BottomTabs}
-        />
+        <>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Main"
+            component={BottomTabs}
+          />
+          <Stack.Screen
+            options={{ title: 'Edit Profile' }}
+            name="EditProfile"
+            component={EditProfileScreen}
+          />
+        </>
       )}
     </Stack.Navigator>
   );

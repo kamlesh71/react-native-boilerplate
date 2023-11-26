@@ -1,11 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useColorScheme } from 'react-native';
 import { setColorSchema } from '@/store/color-schema/slices';
-import { selectUsingSystemSchema } from '@/store/color-schema/selectors';
+import {
+  selectActiveColorSchema,
+  selectUsingSystemSchema,
+} from '@/store/color-schema/selectors';
 import { useUpdatedEffect } from './useUpdatedEffect';
+import { useMountedEffect } from './useMountedEffect';
 
 export const useListenColorSchemaChange = () => {
   const isUsingSystem = useSelector(selectUsingSystemSchema);
+  const activeColorSchema = useSelector(selectActiveColorSchema);
   const systemColorSchema = useColorScheme();
 
   const dispatch = useDispatch();
@@ -16,4 +21,10 @@ export const useListenColorSchemaChange = () => {
       dispatch(setColorSchema(systemColorSchema));
     }
   }, [systemColorSchema, isUsingSystem]);
+
+  useMountedEffect(() => {
+    if (isUsingSystem && systemColorSchema !== activeColorSchema) {
+      dispatch(setColorSchema(systemColorSchema));
+    }
+  });
 };
